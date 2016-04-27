@@ -1,22 +1,29 @@
 package cn.wdu.qdu.game;
 
-public class Computer {
+import java.util.Scanner;
+
+
+public class Computer extends Player{
+
+	Scanner input =new Scanner(System.in);
 
 	public Computer(String name) {
 		// TODO Auto-generated constructor stub
-		super();
+		super(name);
 	}
+	
 
 	// 输出名字										
 	   
-	public void inputName(int num){
+	public void inputName(){
+		int num=input.nextInt();
 
 		if (num == 1) {
-			System.out.println("刘备");
+			setPlayName("刘备");
 		} else if (num == 2) {
-			System.out.println("孙权");
+			setPlayName("孙权");
 		} else
-			System.out.println("曹操");
+			setPlayName("曹操");
 	}
 
 	// 出拳

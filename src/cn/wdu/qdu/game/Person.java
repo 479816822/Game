@@ -2,25 +2,25 @@ package cn.wdu.qdu.game;
 
 import java.util.Scanner;
 
-public class Person extends Player{
+public class Person extends Player {
 
-	Scanner input=new Scanner(System.in);
+	Scanner input = new Scanner(System.in);
+
 	public Person(String name) {
 		// TODO Auto-generated constructor stub
-		super();
-	}
-	
-	
-	
-	//输出名字
-		public void  inputName(){
-			System.out.println();
-		}
-		//出拳
-		public  int myFist(){
-			int num=input.nextInt();
-			return num;
-		}
+		super(name);
+}
 
+	// 输出名字
+	public void inputName() {
+		String name=getPlayName();
+		System.out.println(name);
+	}
+
+	// 出拳
+	public int myFist() {
+		int num = input.nextInt();
+		return num;
+	}
 
 }
