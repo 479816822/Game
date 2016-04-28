@@ -4,12 +4,12 @@ public class GameTest {
 	
 	public static void main(String[] args) {
 		Computer computer=new Computer("");
-		Person person=new Person("люд╥");
-		Judger judger=new Judger();
+		Person person=new Person("");
+		Judger judger=new Judger();                   
 		
+		judger.startGame();
+		judger.askName(computer, person);
 		while(true){
-			judger.startGame();
-			judger.askName(computer, person);
 			String yn=judger.playGame(computer, person);
 			
 			if(yn.equals("n")){

@@ -13,7 +13,10 @@ public class Person extends Player {
 
 	// Êä³öÃû×Ö
 	public void inputName() {
-		String name=getPlayName();
+		
+		String name=null;
+		 name=input.next();
+		setPlayName(name);
 		System.out.println(name);
 	}
 
